@@ -1,108 +1,203 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>House of Mewar Hospitality | Freelancer Services</title><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet"><style>
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Montserrat',sans-serif;background:#0b0b0b;color:#eaeaea;line-height:1.7;}
-a{text-decoration:none;color:inherit;}
-img{max-width:100%;display:block;}
+<title>House of Mewar | Luxury Weddings</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Montserrat',sans-serif;
+  background:#0b0b0b;color:#eaeaea;line-height:1.7
+}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
 
 /* NAV */
-nav{position:fixed;top:0;width:100%;padding:18px 8%;display:flex;justify-content:space-between;align-items:center;background:rgba(0,0,0,.65);backdrop-filter:blur(10px);z-index:999;}
-nav h1{font-family:'Playfair Display',serif;letter-spacing:1px;}
-nav ul{display:flex;gap:28px;list-style:none;font-size:14px;opacity:.9;}
+nav{
+  position:fixed;top:0;width:100%;
+  padding:18px 8%;
+  display:flex;justify-content:space-between;align-items:center;
+  background:rgba(0,0,0,.55);backdrop-filter:blur(10px);z-index:999
+}
+nav h1{font-family:'Playfair Display',serif;letter-spacing:1px}
+nav ul{display:flex;gap:28px;list-style:none;font-size:14px;opacity:.9}
 
-/* HERO */
-.hero{height:90vh;background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.75)),url('https://images.unsplash.com/photo-1573164574390-90b9f39d14e6');background-size:cover;background-position:center;background-attachment:fixed;display:flex;align-items:center;padding:0 8%;}
-.hero .wrap{max-width:650px;}
-.hero h2{font-family:'Playfair Display',serif;font-size:52px;margin-bottom:18px;}
-.hero p{opacity:.85;margin-bottom:34px;}
-.hero .cta{display:inline-block;padding:14px 36px;border:1px solid #cfa75d;color:#cfa75d;letter-spacing:2px;transition:.35s;}
-.hero .cta:hover{background:#cfa75d;color:#000;}
+/* HERO (cinematic) */
+.hero{
+  height:90vh;
+  background:
+  linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.75)),
+  url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9');
+  background-size:cover;background-position:center;background-attachment:fixed;
+  display:flex;align-items:center;padding:0 8%
+}
+.hero .wrap{max-width:620px}
+.hero h2{
+  font-family:'Playfair Display',serif;
+  font-size:54px;margin-bottom:18px
+}
+.hero p{opacity:.85;margin-bottom:34px}
+.hero .cta{
+  display:inline-block;padding:14px 36px;
+  border:1px solid #cfa75d;color:#cfa75d;letter-spacing:2px;
+  transition:.35s
+}
+.hero .cta:hover{background:#cfa75d;color:#000}
 
-section{padding:100px 8%;}
-.title{font-family:'Playfair Display',serif;font-size:36px;margin-bottom:28px;text-align:center;}
-.sub{max-width:860px;opacity:.85;margin:auto;text-align:center;}
+/* SECTION */
+section{padding:100px 8%}
+.title{
+  font-family:'Playfair Display',serif;
+  font-size:36px;margin-bottom:28px
+}
+.sub{max-width:860px;opacity:.85}
 
 /* EDITORIAL SERVICES */
-.editorial{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;margin-top:50px;}
-.editorial .box{background:#121212;border:1px solid #1f1f1f;padding:44px;border-radius:12px;}
-.editorial h3{font-family:'Playfair Display',serif;margin-bottom:14px;}
-.editorial img{border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,.45);}
+.editorial{
+  display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center
+}
+.editorial .box{
+  background:#121212;border:1px solid #1f1f1f;padding:44px
+}
+.editorial h3{
+  font-family:'Playfair Display',serif;margin-bottom:14px
+}
+.editorial img{
+  border-radius:4px;box-shadow:0 20px 60px rgba(0,0,0,.45)
+}
 
 /* SERVICES GRID */
-.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:36px;margin-top:40px;}
-.card{background:#121212;border:1px solid #1f1f1f;padding:36px;transition:.35s;border-radius:12px;}
-.card:hover{transform:translateY(-8px);border-color:#cfa75d;}
-.card h4{font-family:'Playfair Display',serif;margin-bottom:10px;}
+.services{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:36px;margin-top:40px
+}
+.card{
+  background:#121212;border:1px solid #1f1f1f;padding:36px;transition:.35s
+}
+.card:hover{transform:translateY(-8px);border-color:#cfa75d}
+.card h4{font-family:'Playfair Display',serif;margin-bottom:10px}
 
 /* GALLERY */
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:30px;}
-.gallery figure{position:relative;overflow:hidden;border-radius:12px;}
-.gallery img{height:320px;object-fit:cover;transition:.4s;}
-.gallery figcaption{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.45);opacity:0;transition:.4s;font-family:'Playfair Display',serif;letter-spacing:1px;color:#f7e6b1;font-weight:600;text-align:center;padding:10px;}
-.gallery figure:hover img{transform:scale(1.06);}
-.gallery figure:hover figcaption{opacity:1;}
+.gallery{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:18px;margin-top:30px
+}
+.gallery figure{position:relative;overflow:hidden}
+.gallery img{height:320px;object-fit:cover;transition:.4s}
+.gallery figcaption{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  background:rgba(0,0,0,.45);opacity:0;transition:.4s;
+  font-family:'Playfair Display',serif;letter-spacing:1px
+}
+.gallery figure:hover img{transform:scale(1.06)}
+.gallery figure:hover figcaption{opacity:1}
 
 /* CONTACT */
-.contact{text-align:center;background:#0f0f0f;border-top:1px solid #1f1f1f;padding:80px 8%;}
-.contact .btn{display:inline-block;margin-top:22px;padding:14px 36px;background:#cfa75d;color:#000;letter-spacing:2px;border-radius:40px;}
-.contact .meta{margin-top:16px;opacity:.85;}
+.contact{
+  text-align:center;background:#0f0f0f;border-top:1px solid #1f1f1f
+}
+.contact .btn{
+  display:inline-block;margin-top:22px;padding:14px 36px;
+  background:#cfa75d;color:#000;letter-spacing:2px
+}
+.contact .meta{margin-top:16px;opacity:.85}
 
 /* FLOATING WHATSAPP */
-.float-wa{position:fixed;right:22px;bottom:22px;z-index:999;padding:14px 18px;border-radius:40px;background:#cfa75d;color:#000;font-weight:500;}
+.float-wa{
+  position:fixed;right:22px;bottom:22px;z-index:999;
+  padding:14px 18px;border-radius:40px;
+  background:#cfa75d;color:#000;font-weight:500
+}
 
 /* FOOTER */
-footer{padding:28px;text-align:center;background:#000;opacity:.7;font-size:13px;}
+footer{
+  padding:28px;text-align:center;background:#000;opacity:.7;font-size:13px
+}
 
 /* MOBILE */
-@media(max-width:900px){.hero h2{font-size:40px}.editorial{grid-template-columns:1fr}nav ul{display:none;}}
-</style></head><body><nav>
-<h1>House of Mewar Hospitality</h1>
-<ul><li>Home</li><li>About</li><li>Services</li><li>Portfolio</li><li>Contact</li></ul>
-</nav><div class="hero">
-<div class="wrap">
-<h2>Luxury Hospitality & Freelancer Event Services</h2>
-<p>Providing elite hospitality and event solutions with precision, elegance, and unforgettable experiences across India.</p>
-<a class="cta" href="https://wa.me/919587642650">WHATSAPP US</a>
+@media(max-width:900px){
+  .hero h2{font-size:40px}
+  .editorial{grid-template-columns:1fr}
+  nav ul{display:none}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h1>House of Mewar</h1>
+  <ul>
+    <li>Home</li><li>About</li><li>Services</li><li>Gallery</li><li>Contact</li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <div class="wrap">
+    <h2>Luxury Destination Weddings</h2>
+    <p>Editorially crafted royal celebrations inspired by heritage, elegance and timeless design.</p>
+    <a class="cta" href="https://wa.me/919587642650">WHATSAPP US</a>
+  </div>
 </div>
-</div><section>
-<h2 class="title">About Us</h2>
-<p class="sub">House of Mewar Hospitality Freelancer Company delivers top-tier event and hospitality solutions. Every service is curated with professionalism, elegance, and attention to detail for unforgettable client experiences.</p>
-</section><section class="editorial">
-<div class="box">
-<h3>Our Expertise</h3>
-<p>We offer end-to-end event management, hospitality services, venue styling, client coordination, and entertainment arrangements, all tailored for luxury experiences.</p>
-</div>
-<img src="https://images.unsplash.com/photo-1582719478250-5b2be771c226" alt="Premium Event Planning">
-</section><section>
-<h2 class="title">Our Services</h2>
-<div class="services">
-<div class="card"><h4>Event Planning</h4><p>Customized planning for weddings, parties, and corporate events.</p></div>
-<div class="card"><h4>Hospitality Management</h4><p>Staff, guest coordination, and on-site management for seamless experiences.</p></div>
-<div class="card"><h4>Décor & Styling</h4><p>Luxury themes, floral design, and professional staging.</p></div>
-<div class="card"><h4>Entertainment</h4><p>Live performances, music, and curated activities for guests.</p></div>
-</div>
-</section><section>
-<h2 class="title">Portfolio</h2>
-<div class="gallery">
-<figure><img src="https://images.unsplash.com/photo-1559628231-ef168bc1663f"><figcaption>Grand Banquet</figcaption></figure>
-<figure><img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357"><figcaption>Luxury Lounge</figcaption></figure>
-<figure><img src="https://images.unsplash.com/photo-1562887089-52f51c0d8f3b"><figcaption>Event Styling</figcaption></figure>
-<figure><img src="https://images.unsplash.com/photo-1541542684-9a5e9c39d1bc"><figcaption>Reception Setup</figcaption></figure>
-</div>
-</section><section class="contact">
-<h2 class="title">Contact Us</h2>
-<p class="sub">Connect with us to create your premium hospitality and freelancer event experiences.</p>
-<a class="btn" href="https://wa.me/919587642650">Chat on WhatsApp</a>
-<div class="meta">
-<p>Instagram: <a href="https://instagram.com/House_of_Mewar_events" target="_blank">@House_of_Mewar_events</a></p>
-<p>Contact: <a href="tel:+917976902165">+91 79769 02165</a></p>
-</div>
-</section><a class="float-wa" href="https://wa.me/919587642650">WhatsApp</a>
+
+<section>
+  <h2 class="title">About House of Mewar</h2>
+  <p class="sub">
+    We curate refined luxury weddings inspired by royal legacy. Every celebration is designed
+    with artistic precision, premium textiles, bespoke décor and flawless execution.
+  </p>
+</section>
+
+<section class="editorial">
+  <div class="box">
+    <h3>Our Signature Experience</h3>
+    <p>
+      From palace venues to couture décor, we deliver magazine-worthy weddings.
+      Every detail reflects sophistication, balance and grandeur.
+    </p>
+  </div>
+  <img src="https://images.unsplash.com/photo-1549417229-ec4f4e1d3c29" alt="">
+</section>
+
+<section>
+  <h2 class="title">Our Expertise</h2>
+  <div class="services">
+    <div class="card"><h4>Destination Weddings</h4><p>Palaces & heritage venues curated end-to-end.</p></div>
+    <div class="card"><h4>Luxury Décor</h4><p>Textile-rich styling, florals & bespoke themes.</p></div>
+    <div class="card"><h4>Celebrity Events</h4><p>Elite celebrations managed seamlessly.</p></div>
+    <div class="card"><h4>Complete Planning</h4><p>Concept to execution with precision.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2 class="title">Gallery</h2>
+  <div class="gallery">
+    <figure><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed"><figcaption>Royal Evenings</figcaption></figure>
+    <figure><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"><figcaption>Grand Mandaps</figcaption></figure>
+    <figure><img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9"><figcaption>Timeless Moments</figcaption></figure>
+    <figure><img src="https://images.unsplash.com/photo-1530023367847-a683933f4172"><figcaption>Luxury Details</figcaption></figure>
+  </div>
+</section>
+
+<section class="contact">
+  <h2 class="title">Contact</h2>
+  <p class="sub">Let’s design your royal celebration.</p>
+  <a class="btn" href="https://wa.me/919587642650">Chat on WhatsApp</a>
+  <div class="meta">
+    <p>Instagram: <a href="https://instagram.com/House_of_Mewar_events" target="_blank">@House_of_Mewar_events</a></p>
+    <p>Contact: <a href="tel:+917976902165">+91 79769 02165</a></p>
+  </div>
+</section>
+
+<a class="float-wa" href="https://wa.me/919587642650">WhatsApp</a>
 
 <footer>
-© 2026 House of Mewar Hospitality Freelancer Services • Luxury Event Solutions
-</footer></body>
+  © 2026 House of Mewar Events • Luxury Wedding Experiences
+</footer>
+
+</body>
 </html>
