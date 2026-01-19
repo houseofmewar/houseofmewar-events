@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>House of Mewar | Luxury Weddings</title>
+<title>House of Mewar Hospitality</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
@@ -26,13 +26,15 @@ nav{
 nav h1{font-family:'Playfair Display',serif;letter-spacing:1px}
 nav ul{display:flex;gap:28px;list-style:none;font-size:14px;opacity:.9}
 
-/* HERO (cinematic) */
+/* HERO */
 .hero{
   height:90vh;
   background:
-  linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.75)),
-  url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9');
-  background-size:cover;background-position:center;background-attachment:fixed;
+  linear-gradient(180deg,rgba(0,0,0,.6),rgba(0,0,0,.85)),
+  url('LOGO_IMAGE_URL_HERE');
+  background-size:420px;
+  background-repeat:no-repeat;
+  background-position:80% center;
   display:flex;align-items:center;padding:0 8%
 }
 .hero .wrap{max-width:620px}
@@ -56,45 +58,27 @@ section{padding:100px 8%}
 }
 .sub{max-width:860px;opacity:.85}
 
-/* EDITORIAL SERVICES */
-.editorial{
-  display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center
+/* IMAGE + TEXT */
+.split{
+  display:grid;grid-template-columns:1.1fr .9fr;
+  gap:60px;align-items:center
 }
-.editorial .box{
-  background:#121212;border:1px solid #1f1f1f;padding:44px
-}
-.editorial h3{
-  font-family:'Playfair Display',serif;margin-bottom:14px
-}
-.editorial img{
-  border-radius:4px;box-shadow:0 20px 60px rgba(0,0,0,.45)
+.split img{
+  border-radius:6px;
+  box-shadow:0 20px 60px rgba(0,0,0,.45)
 }
 
-/* SERVICES GRID */
+/* SERVICES */
 .services{
   display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:36px;margin-top:40px
+  gap:28px;margin-top:40px
 }
 .card{
-  background:#121212;border:1px solid #1f1f1f;padding:36px;transition:.35s
+  background:#121212;border:1px solid #1f1f1f;padding:32px;
 }
-.card:hover{transform:translateY(-8px);border-color:#cfa75d}
-.card h4{font-family:'Playfair Display',serif;margin-bottom:10px}
-
-/* GALLERY */
-.gallery{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:18px;margin-top:30px
+.card h4{
+  font-family:'Playfair Display',serif;margin-bottom:8px
 }
-.gallery figure{position:relative;overflow:hidden}
-.gallery img{height:320px;object-fit:cover;transition:.4s}
-.gallery figcaption{
-  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
-  background:rgba(0,0,0,.45);opacity:0;transition:.4s;
-  font-family:'Playfair Display',serif;letter-spacing:1px
-}
-.gallery figure:hover img{transform:scale(1.06)}
-.gallery figure:hover figcaption{opacity:1}
 
 /* CONTACT */
 .contact{
@@ -104,24 +88,18 @@ section{padding:100px 8%}
   display:inline-block;margin-top:22px;padding:14px 36px;
   background:#cfa75d;color:#000;letter-spacing:2px
 }
-.contact .meta{margin-top:16px;opacity:.85}
 
-/* FLOATING WHATSAPP */
+/* FLOAT WA */
 .float-wa{
-  position:fixed;right:22px;bottom:22px;z-index:999;
+  position:fixed;right:22px;bottom:22px;
   padding:14px 18px;border-radius:40px;
   background:#cfa75d;color:#000;font-weight:500
 }
 
-/* FOOTER */
-footer{
-  padding:28px;text-align:center;background:#000;opacity:.7;font-size:13px
-}
-
 /* MOBILE */
 @media(max-width:900px){
-  .hero h2{font-size:40px}
-  .editorial{grid-template-columns:1fr}
+  .hero h2{font-size:38px}
+  .split{grid-template-columns:1fr}
   nav ul{display:none}
 }
 </style>
@@ -130,74 +108,99 @@ footer{
 <body>
 
 <nav>
-  <h1>House of Mewar</h1>
+  <h1>House of Mewar Hospitality</h1>
   <ul>
-    <li>Home</li><li>About</li><li>Services</li><li>Gallery</li><li>Contact</li>
+    <li>Home</li><li>Services</li><li>Team</li><li>Contact</li>
   </ul>
 </nav>
 
 <div class="hero">
   <div class="wrap">
-    <h2>Luxury Destination Weddings</h2>
-    <p>Editorially crafted royal celebrations inspired by heritage, elegance and timeless design.</p>
+    <h2>Luxury Hospitality Experiences</h2>
+    <p>
+      Royal hospitality management curated with precision, elegance and flawless guest handling.
+    </p>
     <a class="cta" href="https://wa.me/919587642650">WHATSAPP US</a>
   </div>
 </div>
 
 <section>
-  <h2 class="title">About House of Mewar</h2>
+  <h2 class="title">About Us</h2>
   <p class="sub">
-    We curate refined luxury weddings inspired by royal legacy. Every celebration is designed
-    with artistic precision, premium textiles, bespoke décor and flawless execution.
+    House of Mewar Hospitality specializes in premium guest experience management,
+    luxury logistics, curated hospitality services and elite on-ground execution.
   </p>
 </section>
 
-<section class="editorial">
-  <div class="box">
-    <h3>Our Signature Experience</h3>
-    <p>
-      From palace venues to couture décor, we deliver magazine-worthy weddings.
-      Every detail reflects sophistication, balance and grandeur.
+<!-- TEAM -->
+<section class="split">
+  <div>
+    <h2 class="title">Our Hospitality Team</h2>
+    <p class="sub">
+      Trained professionals delivering seamless guest coordination, protocol handling
+      and luxury service standards.
     </p>
   </div>
-  <img src="https://images.unsplash.com/photo-1549417229-ec4f4e1d3c29" alt="">
+  <img src="TEAM_IMAGE_URL" alt="Our Team">
 </section>
 
-<section>
-  <h2 class="title">Our Expertise</h2>
-  <div class="services">
-    <div class="card"><h4>Destination Weddings</h4><p>Palaces & heritage venues curated end-to-end.</p></div>
-    <div class="card"><h4>Luxury Décor</h4><p>Textile-rich styling, florals & bespoke themes.</p></div>
-    <div class="card"><h4>Celebrity Events</h4><p>Elite celebrations managed seamlessly.</p></div>
-    <div class="card"><h4>Complete Planning</h4><p>Concept to execution with precision.</p></div>
+<!-- F&B -->
+<section class="split">
+  <img src="FNB_IMAGE_URL" alt="Food & Beverage">
+  <div>
+    <h2 class="title">Food & Beverage Hospitality</h2>
+    <p class="sub">
+      Curated dining experiences, service flow management,
+      VIP table handling and premium catering coordination.
+    </p>
+  </div>
+</section>
+
+<!-- HELP DESK -->
+<section class="split">
+  <div>
+    <h2 class="title">Help Desk & Guest Assistance</h2>
+    <p class="sub">
+      Dedicated help desks, RSVP management, guest guidance,
+      wheelchair support and on-ground assistance.
+    </p>
+  </div>
+  <img src="HELPDESK_IMAGE_URL" alt="Help Desk">
+</section>
+
+<!-- PRODUCTION -->
+<section class="split">
+  <img src="PRODUCTION_IMAGE_URL" alt="Production">
+  <div>
+    <h2 class="title">Production Management</h2>
+    <p class="sub">
+      Stage production, SFX, lighting, live acts,
+      luxury setups and artist coordination.
+    </p>
   </div>
 </section>
 
 <section>
-  <h2 class="title">Gallery</h2>
-  <div class="gallery">
-    <figure><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed"><figcaption>Royal Evenings</figcaption></figure>
-    <figure><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"><figcaption>Grand Mandaps</figcaption></figure>
-    <figure><img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9"><figcaption>Timeless Moments</figcaption></figure>
-    <figure><img src="https://images.unsplash.com/photo-1530023367847-a683933f4172"><figcaption>Luxury Details</figcaption></figure>
+  <h2 class="title">Our Services</h2>
+  <div class="services">
+    <div class="card"><h4>Event Hospitality</h4></div>
+    <div class="card"><h4>Logistics Management</h4></div>
+    <div class="card"><h4>RSVP & Guest Relations</h4></div>
+    <div class="card"><h4>Digital Invitations</h4></div>
+    <div class="card"><h4>Photography & Reels</h4></div>
+    <div class="card"><h4>Luxury Games & Live Stalls</h4></div>
+    <div class="card"><h4>Giveaways & Vintage Cars</h4></div>
+    <div class="card"><h4>Bartender & Folk Performances</h4></div>
+    <div class="card"><h4>SFX & Live Production</h4></div>
   </div>
 </section>
 
 <section class="contact">
-  <h2 class="title">Contact</h2>
-  <p class="sub">Let’s design your royal celebration.</p>
+  <h2 class="title">Contact Us</h2>
   <a class="btn" href="https://wa.me/919587642650">Chat on WhatsApp</a>
-  <div class="meta">
-    <p>Instagram: <a href="https://instagram.com/House_of_Mewar_events" target="_blank">@House_of_Mewar_events</a></p>
-    <p>Contact: <a href="tel:+917976902165">+91 79769 02165</a></p>
-  </div>
 </section>
 
 <a class="float-wa" href="https://wa.me/919587642650">WhatsApp</a>
-
-<footer>
-  © 2026 House of Mewar Events • Luxury Wedding Experiences
-</footer>
 
 </body>
 </html>
