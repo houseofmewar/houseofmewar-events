@@ -1,76 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>House of Mewar Events</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body{
-      margin:0;
-      font-family: Georgia, serif;
-      background:#f6f1e7;
-      color:#1f2a44;
-      text-align:center;
-    }
-    header{
-      background:#1f2a44;
-      color:#fff;
-      padding:40px 20px;
-    }
-    header h1{margin:0;font-size:36px;}
-    header p{font-size:18px;margin-top:10px;}
-    section{padding:40px 20px;}
-    .services{display:grid;gap:15px;max-width:800px;margin:auto;}
-    .box{
-      background:#fff;
-      padding:20px;
-      border-radius:12px;
-      box-shadow:0 4px 10px rgba(0,0,0,0.1);
-    }
-    footer{
-      background:#1f2a44;
-      color:#fff;
-      padding:15px;
-      font-size:14px;
-    }
-    .lang{font-weight:bold;margin-top:20px;}
-  </style>
+<meta charset="UTF-8">
+<title>House of Mewar Events | Luxury Wedding Planners</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins', sans-serif;
+  background:#0f1a2b;
+  color:#ffffff;
+}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:40px;
+  background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1529634891322-3e2a7b1a6d3c') center/cover no-repeat;
+}
+
+.hero h1{
+  font-family:'Playfair Display', serif;
+  font-size:3.5rem;
+  letter-spacing:2px;
+  margin-bottom:15px;
+}
+
+.hero p{
+  font-size:1.2rem;
+  color:#d4af37;
+  margin-bottom:30px;
+}
+
+.hero a{
+  padding:15px 35px;
+  background:#d4af37;
+  color:#000;
+  text-decoration:none;
+  border-radius:40px;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.hero a:hover{
+  background:#bfa132;
+}
+
+/* SECTION */
+.section{
+  padding:80px 20px;
+  max-width:1100px;
+  margin:auto;
+  text-align:center;
+}
+
+.section h2{
+  font-family:'Playfair Display', serif;
+  font-size:2.5rem;
+  margin-bottom:20px;
+}
+
+.section p{
+  font-size:1rem;
+  color:#cccccc;
+  line-height:1.8;
+}
+
+/* SERVICES */
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+  margin-top:40px;
+}
+
+.card{
+  background:#16233b;
+  padding:30px;
+  border-radius:20px;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 10px 30px rgba(212,175,55,0.3);
+}
+
+.card h3{
+  font-family:'Playfair Display', serif;
+  color:#d4af37;
+  margin-bottom:15px;
+}
+
+/* CONTACT */
+.contact{
+  background:#0b1323;
+  padding:80px 20px;
+  text-align:center;
+}
+
+.contact h2{
+  font-family:'Playfair Display', serif;
+  font-size:2.5rem;
+  margin-bottom:20px;
+}
+
+.contact a{
+  display:inline-block;
+  margin-top:25px;
+  padding:15px 40px;
+  background:#25d366;
+  color:#000;
+  text-decoration:none;
+  font-weight:500;
+  border-radius:40px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  font-size:0.9rem;
+  color:#888;
+}
+</style>
 </head>
+
 <body>
 
-<header>
-  <h1>House of Mewar Events</h1>
-  <p>Royal Weddings & Luxury Events</p>
-  <p class="lang">हाउस ऑफ मेवाड़ इवेंट्स – शाही शादियाँ और भव्य समारोह</p>
-</header>
-
-<section>
-  <h2>About Us | हमारे बारे में</h2>
-  <p>
-    Inspired by the royal legacy of Mewar, we create luxury weddings and royal celebrations across India.<br><br>
-    मेवाड़ की शाही विरासत से प्रेरित, हम पूरे भारत में भव्य और शाही इवेंट्स का आयोजन करते हैं।
-  </p>
-</section>
-
-<section>
-  <h2>Our Services | हमारी सेवाएं</h2>
-  <div class="services">
-    <div class="box">Royal Weddings | शाही शादियाँ</div>
-    <div class="box">Destination Weddings | डेस्टिनेशन वेडिंग</div>
-    <div class="box">Luxury Décor | रॉयल डेकोर</div>
-    <div class="box">Palace Events | पैलेस इवेंट्स</div>
-    <div class="box">Corporate Events | कॉर्पोरेट इवेंट्स</div>
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h1>House of Mewar Events</h1>
+    <p>Luxury Weddings & Royal Celebrations</p>
+    <a href="https://wa.me/919587642650">Plan Your Royal Wedding</a>
   </div>
 </section>
 
-<section>
-  <h2>Contact | संपर्क करें</h2>
-  <p>📍 Udaipur | Pan India</p>
-  <p>📩 Instagram: @house_of_mewar_events</p>
+<!-- ABOUT -->
+<section class="section">
+  <h2>About Us</h2>
+  <p>
+    Inspired by the timeless royal heritage of Mewar, we specialize in crafting
+    bespoke luxury weddings and elite celebrations across India. Every detail
+    reflects elegance, tradition, and unmatched grandeur.
+  </p>
+</section>
+
+<!-- SERVICES -->
+<section class="section">
+  <h2>Our Expertise</h2>
+
+  <div class="services">
+    <div class="card">
+      <h3>Royal Destination Weddings</h3>
+      <p>Palaces, heritage venues, and luxury locations curated to perfection.</p>
+    </div>
+
+    <div class="card">
+      <h3>Luxury Décor & Styling</h3>
+      <p>Handcrafted floral concepts, regal themes, and premium aesthetics.</p>
+    </div>
+
+    <div class="card">
+      <h3>Celebrity & Entertainment</h3>
+      <p>Artists, performances, and curated entertainment experiences.</p>
+    </div>
+
+    <div class="card">
+      <h3>End-to-End Event Planning</h3>
+      <p>From concept to execution with flawless coordination.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+  <h2>Connect With Us</h2>
+  <p>Begin your journey towards an unforgettable royal celebration.</p>
+  <a href="https://wa.me/919587642650">Chat on WhatsApp</a>
 </section>
 
 <footer>
-  © 2026 House of Mewar Events
+  © 2026 House of Mewar Events. All Rights Reserved.
 </footer>
 
 </body>
