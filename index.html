@@ -2,275 +2,253 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<title>House of Mewar Hospitality | Luxury Hospitality Services</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>House of Mewar Hospitality</title>
 
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-:root{
-  --gold:#cfa75d;
-  --dark:#0b0b0b;
-}
-
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
 body{
-  font-family:'Poppins',sans-serif;
-  background:var(--dark);
-  color:#fff;
+  font-family:'Montserrat',sans-serif;
+  background:#0b0b0b;
+  color:#eaeaea;
+  line-height:1.7
 }
+a{text-decoration:none;color:inherit}
+img{width:100%;display:block}
+
+/* NAV */
+nav{
+  position:fixed;top:0;width:100%;
+  padding:18px 8%;
+  display:flex;justify-content:space-between;align-items:center;
+  background:rgba(0,0,0,.6);backdrop-filter:blur(12px);
+  z-index:999
+}
+nav h1{
+  font-family:'Playfair Display',serif;
+  letter-spacing:2px;
+  color:#cfa75d
+}
+nav ul{display:flex;gap:26px;list-style:none;font-size:14px}
 
 /* HERO */
 .hero{
-  height:100vh;
+  height:95vh;
+  background:
+  linear-gradient(180deg,rgba(0,0,0,.45),rgba(0,0,0,.85)),
+  url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9');
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
   display:flex;
   align-items:center;
-  justify-content:center;
-  text-align:center;
-  background:
-  linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
-  url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb');
-  background-size:cover;
+  padding:0 8%
 }
-.hero h1{
+.hero .wrap{max-width:650px}
+.hero h2{
   font-family:'Playfair Display',serif;
-  font-size:46px;
-  letter-spacing:3px;
+  font-size:58px;
+  margin-bottom:18px
 }
-.hero p{opacity:.8;margin-top:10px}
+.hero p{opacity:.85;margin-bottom:32px}
+.cta{
+  display:inline-block;
+  padding:14px 38px;
+  border:1px solid #cfa75d;
+  color:#cfa75d;
+  letter-spacing:2px;
+  transition:.3s
+}
+.cta:hover{background:#cfa75d;color:#000}
 
-/* SECTION */
+/* SECTIONS */
 section{padding:100px 8%}
+.title{
+  font-family:'Playfair Display',serif;
+  font-size:38px;
+  margin-bottom:26px
+}
+.sub{max-width:880px;opacity:.85}
 
 /* SERVICES */
-.services h2,.locations h2,.contact h2{
-  font-family:'Playfair Display',serif;
-  font-size:36px;
-  text-align:center;
-}
-.cards{
-  margin-top:50px;
+.services{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:30px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:36px;
+  margin-top:40px
 }
 .card{
-  background:#111;
-  border:1px solid #1e1e1e;
+  background:#121212;
+  border:1px solid #1f1f1f;
   padding:36px;
-  border-radius:18px;
-  transition:.4s;
+  transition:.35s
 }
 .card:hover{
-  transform:translateY(-10px);
-  border-color:var(--gold);
-  box-shadow:0 30px 60px rgba(207,167,93,.2);
+  transform:translateY(-8px);
+  border-color:#cfa75d
 }
-.card h3{
+.card h4{
   font-family:'Playfair Display',serif;
-  margin-bottom:10px;
+  margin-bottom:12px;
+  color:#cfa75d
 }
 
-/* LOCATIONS */
-.locations{
-  background:#fff;
-  color:#111;
+/* IMAGE BLOCKS */
+.image-block{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:60px;
+  align-items:center
 }
-.locations p{
-  text-align:center;
-  max-width:520px;
-  margin:15px auto;
-}
-.map-wrap{
-  margin:60px auto 0;
-  max-width:600px;
-  position:relative;
-  animation:zoomMap 2s ease forwards;
-}
-@keyframes zoomMap{
-  from{transform:scale(.8);opacity:0}
-  to{transform:scale(1);opacity:1}
-}
-.map-wrap img{width:100%}
-
-/* CITY PIN */
-.pin{
-  position:absolute;
-  width:14px;height:14px;
-  background:var(--gold);
-  border-radius:50%;
-  animation:pulse 2s infinite;
-}
-.pin span{
-  position:absolute;
-  top:-26px;
-  left:-20px;
-  font-size:12px;
-  opacity:0;
-  animation:fadeCity 1s forwards;
-  animation-delay:1.8s;
-}
-@keyframes pulse{
-  0%{transform:scale(1)}
-  50%{transform:scale(1.4)}
-  100%{transform:scale(1)}
-}
-@keyframes fadeCity{
-  to{opacity:1}
+.image-block img{
+  border-radius:6px;
+  box-shadow:0 25px 60px rgba(0,0,0,.45)
 }
 
-/* Positions */
-.rajasthan{top:32%;left:42%}
-.delhi{top:24%;left:50%}
-.mumbai{top:45%;left:36%}
-.goa{top:50%;left:38%}
-.kolkata{top:38%;left:62%}
+/* MAP */
+.map{
+  margin-top:40px;
+  border:1px solid #1f1f1f
+}
 
 /* CONTACT */
 .contact{
   background:#0f0f0f;
-}
-.contact p{
   text-align:center;
-  max-width:480px;
-  margin:15px auto 40px;
-  opacity:.8;
+  border-top:1px solid #1f1f1f
 }
-form{
+.contact form{
   max-width:420px;
-  margin:auto;
+  margin:30px auto 0;
+  display:grid;
+  gap:16px
+}
+.contact input, .contact textarea{
   background:#111;
-  padding:40px;
-  border-radius:20px;
-  border:1px solid #1f1f1f;
-}
-input,textarea{
-  width:100%;
-  padding:14px;
-  margin-bottom:16px;
-  background:#0b0b0b;
   border:1px solid #222;
-  color:#fff;
-  border-radius:8px;
-}
-textarea{height:120px;resize:none}
-button{
-  width:100%;
-  background:var(--gold);
-  color:#000;
-  border:none;
   padding:14px;
-  border-radius:30px;
-  font-weight:600;
+  color:#fff
+}
+.contact button{
+  padding:14px;
+  background:#cfa75d;
+  border:none;
+  color:#000;
   letter-spacing:2px;
-  cursor:pointer;
+  cursor:pointer
 }
 
-/* RESPONSIVE */
-@media(max-width:768px){
-  .hero h1{font-size:32px}
+/* WHATSAPP FLOAT */
+.wa{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  padding:14px 20px;
+  background:#cfa75d;
+  color:#000;
+  border-radius:40px;
+  font-weight:500;
+  z-index:999
+}
+
+/* FOOTER */
+footer{
+  background:#000;
+  padding:26px;
+  text-align:center;
+  font-size:13px;
+  opacity:.7
+}
+
+/* MOBILE */
+@media(max-width:900px){
+  .hero h2{font-size:42px}
+  .image-block{grid-template-columns:1fr}
+  nav ul{display:none}
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<section class="hero">
-  <div>
-    <h1>House of Mewar Hospitality</h1>
-    <p>Luxury Hospitality & Event Solutions</p>
+<nav>
+  <h1>House of Mewar Hospitality</h1>
+  <ul>
+    <li>Home</li>
+    <li>Services</li>
+    <li>Hospitality</li>
+    <li>Contact</li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <div class="wrap">
+    <h2>Luxury Hospitality Experiences</h2>
+    <p>Premium guest management, hospitality operations & elite event support with royal finesse.</p>
+    <a class="cta" href="https://wa.me/919587642650">WHATSAPP US</a>
+  </div>
+</div>
+
+<section>
+  <h2 class="title">About Us</h2>
+  <p class="sub">
+    House of Mewar Hospitality delivers refined hospitality services for luxury weddings,
+    corporate events and destination celebrations. Our expertise lies in seamless guest experience,
+    logistics and premium service execution.
+  </p>
+</section>
+
+<section>
+  <h2 class="title">Our Services</h2>
+  <div class="services">
+    <div class="card"><h4>Event Hospitality</h4><p>End-to-end guest experience management.</p></div>
+    <div class="card"><h4>Logistics & RSVP</h4><p>Transport, coordination & confirmations.</p></div>
+    <div class="card"><h4>Guest Relations</h4><p>Help desk & on-ground support teams.</p></div>
+    <div class="card"><h4>F&B Management</h4><p>Food service coordination & hospitality flow.</p></div>
+    <div class="card"><h4>Production Support</h4><p>Stage, light, sound & operations.</p></div>
+    <div class="card"><h4>Entertainment</h4><p>Folk dance, music, bartenders & luxury games.</p></div>
   </div>
 </section>
 
-<!-- SERVICES -->
-<section class="services">
-<h2>Our Services</h2>
-<div class="cards">
-  <div class="card"><h3>Event Hospitality</h3><p>Guest handling & VIP services.</p></div>
-  <div class="card"><h3>Logistics & RSVP</h3><p>Travel, stay & coordination.</p></div>
-  <div class="card"><h3>Production Management</h3><p>SFX, lighting & live acts.</p></div>
-  <div class="card"><h3>Photography & Reels</h3><p>Luxury visual storytelling.</p></div>
-</div>
+<section class="image-block">
+  <div>
+    <h2 class="title">Hospitality Operations</h2>
+    <p class="sub">Professional teams ensuring smooth guest journeys.</p>
+  </div>
+  <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
 </section>
 
-<!-- LOCATIONS -->
-<section class="locations">
-<h2>Our Presence</h2>
-<p>We provide hospitality services across India</p>
-
-<div class="map-wrap">
-<img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/India_states_blank_map.svg">
-
-<div class="pin rajasthan"><span>Rajasthan</span></div>
-<div class="pin delhi"><span>Delhi</span></div>
-<div class="pin mumbai"><span>Mumbai</span></div>
-<div class="pin goa"><span>Goa</span></div>
-<div class="pin kolkata"><span>Kolkata</span></div>
-</div>
+<section>
+  <h2 class="title">Service Coverage Map</h2>
+  <img class="map" src="https://upload.wikimedia.org/wikipedia/commons/6/6e/India_map_animation.gif">
 </section>
 
-<!-- CONTACT -->
 <section class="contact">
-<h2>Contact Us</h2>
-<p>Have an inquiry? Our team will assist you.</p>
-
-<form id="contactForm">
-<input type="text" id="name" placeholder="Name" required>
-<input type="email" id="email" placeholder="Email" required>
-<input type="tel" id="phone" placeholder="Phone" required>
-<textarea id="message" placeholder="Message"></textarea>
-<button type="submit">Send Message</button>
-</form>
+  <h2 class="title">Contact Us</h2>
+  <p class="sub">Let’s plan your hospitality seamlessly.</p>
+  <form onsubmit="sendWA(event)">
+    <input required placeholder="Your Name">
+    <input required placeholder="Phone Number">
+    <textarea placeholder="Your Requirement"></textarea>
+    <button type="submit">Submit on WhatsApp</button>
+  </form>
 </section>
+
+<a class="wa" href="https://wa.me/919587642650">WhatsApp</a>
+
+<footer>
+© 2026 House of Mewar Hospitality • Luxury Hospitality Services
+</footer>
 
 <script>
-document.getElementById("contactForm").addEventListener("submit",function(e){
+function sendWA(e){
   e.preventDefault();
-
-  let name=document.getElementById("name").value;
-  let phone=document.getElementById("phone").value;
-  let msg=document.getElementById("message").value;
-
-  /* === GOOGLE SHEET / EMAIL BACKEND ===
-     Replace YOUR_SCRIPT_URL below */
-  fetch("YOUR_GOOGLE_APPS_SCRIPT_URL",{
-    method:"POST",
-    body:JSON.stringify({name,phone,msg}),
-  });
-
-  /* === WHATSAPP AUTO MESSAGE === */
-  let text=`Hello House of Mewar,%0AName: ${name}%0APhone: ${phone}%0AMessage: ${msg}`;
-  window.location.href=`https://wa.me/919587642650?text=${text}`;
-});
+  let m="Hello House of Mewar Hospitality, I want hospitality services.";
+  window.open("https://wa.me/919587642650?text="+encodeURIComponent(m));
+}
 </script>
 
 </body>
 </html>
-House_of_Mewar/
-│
-├── index.html        (Home – logo, hero)
-├── about.html
-├── services.html
-├── hospitality.html
-├── gallery.html
-├── team.html
-├── contact.html      (Form + WhatsApp)
-│
-├── css/
-│   └── style.css
-│
-├── js/
-│   └── animations.js
-│
-└── images/
-    ├── logo.png
-    ├── hero.jpg
-    ├── team.jpg
-    ├── fnb.jpg
-    ├── helpdesk.jpg
-    ├── production.jpg
-    ├── map.gif
-
