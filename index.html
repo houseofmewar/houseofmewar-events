@@ -96,7 +96,7 @@ border:none;
 font-weight:500;
 cursor:pointer}
 
-/* WA */
+/* FLOATING BUTTONS */
 .wa{
 position:fixed;
 right:20px;
@@ -105,7 +105,19 @@ background:#cfa75d;
 padding:14px 22px;
 border-radius:40px;
 color:#000;
-font-weight:500}
+font-weight:500;
+z-index:999}
+
+.insta{
+position:fixed;
+right:20px;
+bottom:80px;
+background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);
+padding:14px 22px;
+border-radius:40px;
+color:#fff;
+font-weight:500;
+z-index:999}
 
 /* MOBILE */
 @media(max-width:900px){
@@ -134,35 +146,23 @@ font-weight:500}
 <section>
 <h2 class="title">Our Services</h2>
 <div class="services">
-<div class="card">
-<h4>Event Hospitality</h4>
-<p>Luxury guest handling & VIP management.</p>
-</div>
-<div class="card">
-<h4>F&B Management</h4>
-<p>Premium food & beverage operations.</p>
-</div>
-<div class="card">
-<h4>Help Desk</h4>
-<p>Guest support & hospitality coordination.</p>
-</div>
-<div class="card">
-<h4>Production</h4>
-<p>Stage, sound, light & logistics support.</p>
-</div>
+<div class="card"><h4>Event Hospitality</h4><p>Luxury guest handling & VIP management.</p></div>
+<div class="card"><h4>F&B Management</h4><p>Premium food & beverage operations.</p></div>
+<div class="card"><h4>Help Desk</h4><p>Guest support & hospitality coordination.</p></div>
+<div class="card"><h4>Production</h4><p>Stage, sound, light & logistics support.</p></div>
 </div>
 </section>
 
-<!-- TEAM PHOTO -->
+<!-- TEAM -->
 <section class="block">
 <div>
 <h2 class="title">Our Team</h2>
-<p>Professional hospitality staff trained for luxury events and premium guest experiences.</p>
+<p>Professional hospitality staff trained for luxury events.</p>
 </div>
 <img src="https://images.pexels.com/photos/3184423/pexels-photo-3184423.jpeg">
 </section>
 
-<!-- F&B PHOTO -->
+<!-- F&B -->
 <section class="block">
 <img src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg">
 <div>
@@ -171,7 +171,7 @@ font-weight:500}
 </div>
 </section>
 
-<!-- HELP DESK PHOTO -->
+<!-- HELP DESK -->
 <section class="block">
 <div>
 <h2 class="title">Help Desk</h2>
@@ -180,7 +180,7 @@ font-weight:500}
 <img src="https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg">
 </section>
 
-<!-- PRODUCTION PHOTO -->
+<!-- PRODUCTION -->
 <section class="block">
 <img src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg">
 <div>
@@ -200,7 +200,14 @@ font-weight:500}
 </form>
 </section>
 
-<a class="wa" href="https://wa.me/919587642650">WhatsApp</a>
+<!-- FLOATING BUTTONS -->
+<a class="insta" href="https://www.instagram.com/house_of_mewar_events" target="_blank">
+Instagram
+</a>
+
+<a class="wa" href="https://wa.me/919587642650">
+WhatsApp
+</a>
 
 <script>
 function wa(e){
